@@ -1,0 +1,108 @@
+/* Paleta de cores e variáveis */
+:root {
+    --cor-fundo: #0d0d0d;
+    --cor-fundo-claro: #1a1a1a;
+    --cor-texto: #e0e0e0;
+    --cor-texto-suave: #cccccc;
+    --cor-verde: #00ff00;
+    --cor-verde-hover: #66ff66;
+    --cor-branco: #ffffff;
+    --cor-preto: #000000;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--cor-preto);
+    border-bottom: 1px solid var(--cor-verde);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    color: var(--cor-verde);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--cor-verde);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: linear-gradient(135deg, var(--cor-fundo), var(--cor-fundo-claro));
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--cor-verde);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: var(--cor-texto-suave);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--cor-verde);
+    color: var(--cor-preto);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--cor-verde-hover);
+    color: var(--cor-preto);
+}  
