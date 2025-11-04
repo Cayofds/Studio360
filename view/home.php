@@ -15,7 +15,8 @@
           <li><a href="#">Home</a></li>
           <li><a href="#">Sobre</a></li>
           <li><a href="#">Portfólio</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="./login.php">Login</a></li>
+          <li><a href="../">Teste</a></li>
         </ul>
       </nav>
     </div>

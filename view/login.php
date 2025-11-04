@@ -6,6 +6,8 @@
     <title>Studio360 - Login</title>
 </head>
 <body>
-    
+    <form action="../processamento/login.php" method="post">
+        
+    </form>
 </body>
 </html>
