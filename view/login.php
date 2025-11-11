@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio360 - Login</title>
+    <link rel="stylesheet" href="../css/views/auth.css">
 </head>
 <body>
-    <form action="../processamento/login.php" method="post">
-        <div class="login-container">
-            <h2>Login</h2>
-            <form action="login.php" method="POST">
-                <label for="usuario">Usuário</label>
-                <input type="text" id="usuario" name="usuario" required>
+    <div class="auth-container">
+        <h2 class="auth-title">Login</h2>
+        <form class="auth-form" action="../processamento/login.php" method="post">
+            <label for="usuario">Usuário</label>
+            <input type="text" id="usuario" name="usuario" class="auth-input" required>
 
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" required>
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" class="auth-input" required>
 
-                <button type="submit">Entrar</button>
-            </form>
+            <button type="submit" class="auth-button">Entrar</button>
+        </form>
 
-            <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
-        </div>
-    </form>
+        <p class="auth-footer">
+            Não tem uma conta? <a href="./cadastro.php">Cadastre-se</a>
+        </p>
+    </div>
 </body>
 </html>

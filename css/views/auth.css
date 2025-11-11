@@ -1,0 +1,124 @@
+@import url('../variaveis.css');
+
+/* ===============================
+   ESTILO GERAL PARA TELAS DE AUTENTICAÇÃO
+   (Login, Cadastro, Recuperar Senha etc.)
+   =============================== */
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container principal */
+.auth-container {
+    background-color: var(--cor-fundo-claro);
+    border: 1px solid var(--cor-verde);
+    border-radius: 10px;
+    padding: 40px 50px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.2);
+}
+
+/* Título */
+.auth-title {
+    color: var(--cor-verde);
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+/* Formulário */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+/* Labels */
+.auth-form label {
+    color: var(--cor-texto-suave);
+    font-weight: 500;
+}
+
+/* Campos de entrada */
+.auth-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--cor-verde);
+    border-radius: 6px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-branco);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.auth-input:focus {
+    outline: none;
+    border-color: var(--cor-verde-hover);
+    box-shadow: 0 0 6px var(--cor-verde-hover);
+}
+
+/* Botão */
+.auth-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor-verde);
+    color: var(--cor-preto);
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.auth-button:hover {
+    background-color: var(--cor-verde-hover);
+    transform: scale(1.03);
+}
+
+/* Texto auxiliar (ex: link para cadastro/login) */
+.auth-footer {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: var(--cor-texto-suave);
+    text-align: center;
+}
+
+.auth-footer a {
+    color: var(--cor-verde);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.auth-footer a:hover {
+    color: var(--cor-verde-hover);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 30px 25px;
+    }
+
+    .auth-title {
+        font-size: 1.6rem;
+    }
+}
