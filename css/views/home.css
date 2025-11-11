@@ -1,0 +1,125 @@
+@import url('../variaveis.css');
+@import url('../global.css');
+
+/* ==============================
+   ESTILOS ESPECÍFICOS DA HOME
+   ============================== */
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: linear-gradient(135deg, var(--cor-fundo), var(--cor-fundo-claro));
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--cor-verde);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: var(--cor-texto-suave);
+}
+
+/* Janela */
+.janela {
+    background-color: var(--cor-fundo-claro);
+    text-align: center;
+    border-top: 1px solid var(--cor-verde);
+}
+
+.janela h2 {
+    padding-top: 40px;
+    font-size: 30px;
+    color: var(--cor-verde);
+}
+
+/* Cards container */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    min-height: 100vh;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Card individual */
+.card {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Camada escura */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.85));
+}
+
+/* Conteúdo do card */
+.card-content {
+    position: absolute;
+    bottom: 0;
+    color: var(--cor-texto);
+    padding: 20px;
+    z-index: 1;
+}
+
+/* Título */
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: var(--cor-branco);
+}
+
+/* Categoria */
+.card-category {
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Perfil */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--cor-verde);
+}
+
+.profile-name {
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+}

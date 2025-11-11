@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio 360</title>
-  <link rel="stylesheet" href="../css/variaveis.css">
-  <link rel="stylesheet" href="../css/global.css">
-  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/views/home.css">
 </head>
 <body>
   <header>
@@ -32,11 +30,11 @@
     </div>
   </section>
   <section class="janela">
-    <h2>Trabalhos Feitos</h2>
+    <h2>Trabalhos dos Usuários</h2>
     <div class="cards-container">
       <?php for($i = 1; $i <= 10; $i++): ?>
         <!-- Card -->
-        <div class="card" style="background-image: url('https://picsum.photos/600/400');">
+        <div class="card" style="background-image: url('https://picsum.photos/600/400?random=<?= $i?>');">
           <div class="card-content">
             <h2 class="card-title">Título do Item <?= $i ?></h2>
             <p class="card-category">Categoria: Fotografia</p>
