@@ -1,0 +1,26 @@
+/* ==============================
+   VARIÁVEIS GLOBAIS E RESET
+   ============================== */
+   :root {
+    --cor-fundo: #0d0d0d;
+    --cor-fundo-claro: #1a1a1a;
+    --cor-texto: #e0e0e0;
+    --cor-texto-suave: #cccccc;
+    --cor-verde: #00ff00;
+    --cor-verde-hover: #66ff66;
+    --cor-branco: #ffffff;
+    --cor-preto: #000000;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
