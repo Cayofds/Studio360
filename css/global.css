@@ -1,0 +1,64 @@
+/* ==============================
+   ELEMENTOS GERAIS / REUTILIZÁVEIS
+   ============================== */
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--cor-preto);
+    border-bottom: 1px solid var(--cor-verde);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    color: var(--cor-verde);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--cor-verde);
+}
+
+/* Botões padrão */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--cor-verde);
+    color: var(--cor-preto);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--cor-verde-hover);
+    color: var(--cor-preto);
+}
