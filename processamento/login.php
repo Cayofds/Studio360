@@ -1,35 +1,31 @@
 <?php
 session_start();
-include 'conexao.php';
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+include_once("conexao.php");
+$usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_STRING);
+$senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 
-    // Prepara a consulta para evitar SQL Injection
-    $stmt = $con->prepare("SELECT id, password FROM users WHERE username = ?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $stmt->store_result();
-
-    if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $hashed_password);
-        $stmt->fetch();
-
-        // Verifica a senha
-        if (password_verify($password, $hashed_password)) {
-            // Login bem-sucedido
-            $_SESSION['user_id'] = $id;
-            $_SESSION['username'] = $username;
-            header("Location: ../view/dashboard.php");
-            exit();
+if ((!empty($usuario)) AND (!empty($senha))) {
+    $senha = md5($senha);
+    $result_usuario = "SELECT * FROM usuarios WHERE usuario='$usuario' AND senha='$senha' LIMIT 1";
+    $resultado_usuario = mysqli_query($conn, $result_usuario);
+    if ($resultado_usuario && mysqli_num_rows($resultado_usuario) > 0) {
+        $row_usuario = mysqli_fetch_assoc($resultado_usuario);
+        $_SESSION['usuarioId'] = $row_usuario['id'];
+        $_SESSION['usuarioNome'] = $row_usuario['nome'];
+        $_SESSION['usuarioNiveisAcessoId'] = $row_usuario['niveis_acesso_id'];
+        $_SESSION['usuarioEmail'] = $row_usuario['email'];
+        if ($_SESSION['usuarioNiveisAcessoId'] == "1") {
+            header("Location: ../admin.php");
+        } elseif ($_SESSION['usuarioNiveisAcessoId'] == "2") {
+            header("Location: ../colaborador.php");
         } else {
-            // Senha incorreta
-            echo "Senha incorreta.";
+            header("Location: ../login.php");
         }
     } else {
-        // Usuário não encontrado
-        echo "Usuário não encontrado.";
+        $_SESSION['loginErro'] = "Usuário ou senha inválidos";
+        header("Location: ../login.php");
     }
-
-    $stmt->close();
+} else {
+    $_SESSION['loginErro'] = "Usuário ou senha inválidos";
+    header("Location: ../login.php");
 }
