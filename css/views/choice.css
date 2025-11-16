@@ -1,0 +1,61 @@
+@import url('../variaveis.css');
+@import url('../global.css');
+
+.choices {
+    display: flex;
+    gap: 14px;
+    flex-direction: column;
+}
+
+.choice-card {
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.06);
+    background: var(--cor-fundo-claro);
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.choice-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.choice-title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--cor-verde);
+    font-weight: 700;
+}
+
+.choice-desc {
+    color: var(--cor-texto-suave);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.choice-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Make auth-button full width inside cards for a consistent look */
+.choice-card .auth-button {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+}
+
+.btn-secondary {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--cor-verde);
+    background: transparent;
+    color: var(--cor-verde);
+    text-decoration: none;
+    display: inline-block;
+}
+
+@media (max-width: 520px) {
+    .choices { gap: 12px; }
+    .choice-card { padding: 14px; }
+}

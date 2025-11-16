@@ -1,0 +1,116 @@
+@import url('../variaveis.css');
+@import url('../global.css');
+
+:root {
+    --card-bg: var(--cor-fundo-claro);
+    --text-dark: var(--cor-texto);
+    --text-muted: var(--cor-texto-suave);
+    --primary: var(--cor-verde);
+    --primary-hover: var(--cor-verde-hover);
+    --radius: 10px;
+    --max-width: 760px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 40px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: var(--max-width);
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+    padding: 28px;
+    border: 1px solid rgba(0, 255, 0, 0.15);
+}
+
+.auth-title {
+    margin: 0 0 18px 0;
+    font-size: 20px;
+    color: var(--primary);
+    letter-spacing: 0.2px;
+    font-weight: 600;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.profile-table th,
+.profile-table td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.profile-table th {
+    width: 220px;
+    color: var(--text-muted);
+    font-weight: 600;
+    background: transparent;
+    vertical-align: top;
+}
+
+.profile-table td {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.auth-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.btn-edit {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--primary);
+    color: var(--cor-preto);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background .15s ease, transform .08s ease;
+}
+
+.btn-edit:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.btn-edit:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 520px) {
+    .profile-table th {
+        display: block;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .profile-table td {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    .auth-footer {
+        justify-content: center;
+    }
+}

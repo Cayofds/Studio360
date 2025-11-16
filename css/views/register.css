@@ -1,0 +1,62 @@
+@import url('../variaveis.css');
+@import url('auth.css');
+
+/* Common registration form styles (used by cadastroCriador/Empresa/Visitante) */
+
+.auth-container {
+  max-width: 520px;
+  margin: 28px auto;
+  padding: 36px;
+}
+
+.auth-title {
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-form label { font-weight: 600; color: var(--cor-texto-suave); }
+
+.auth-input {
+  padding: 10px 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 8px;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+.auth-button {
+  background: var(--cor-verde);
+  color: var(--cor-preto);
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.auth-button:hover { filter:brightness(.95); transform: translateY(-1px); }
+
+/* small screens */
+@media (max-width:520px){
+  .auth-container { margin: 16px; padding: 22px; }
+}
+
+/* Back button used in cadastro pages */
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: transparent;
+  color: var(--cor-verde);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-secondary:hover { background: rgba(0,255,0,0.04); }

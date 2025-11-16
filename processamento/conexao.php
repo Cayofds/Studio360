@@ -1,13 +1,13 @@
 <?php
-// Cria a conexão
-$con = new mysqli("localhost", "root", "", "seu_banco");
+// Cria a conexão e exporta uma variável $conn compatível com outros arquivos
+$conn = new mysqli("localhost", "root", "", "studio360");
 
 // Verifica erro
-if ($con->connect_error) {
-    die("Erro de conexão: " . $con->connect_error);
+if ($conn->connect_error) {
+    // Em produção, registre o erro em vez de expor detalhes ao usuário
+    die("Erro de conexão com o banco de dados.");
 }
 
-echo "Conectado com sucesso!";
-
-$con->close();
+// Não echo nem fecho a conexão aqui — os scripts que incluírem este arquivo
+// usarão $conn e poderão fechá-lo quando necessário.
 ?>
