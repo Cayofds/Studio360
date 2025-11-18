@@ -112,6 +112,61 @@ body {
     color: var(--cor-verde-hover);
 }
 
+.recover-card {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px dashed var(--cor-verde);
+    border-radius: 10px;
+    background-color: rgba(0, 255, 0, 0.03);
+}
+
+.recover-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--cor-verde);
+    font-size: 1.2rem;
+}
+
+.recover-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.recover-info {
+    margin-bottom: 10px;
+    text-align: left;
+    color: var(--cor-texto);
+}
+
+.recover-highlight {
+    font-weight: bold;
+    color: var(--cor-verde);
+}
+
+.recover-message {
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.recover-neutral {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.recover-success {
+    background-color: rgba(0, 128, 0, 0.2);
+    border: 1px solid var(--cor-verde);
+}
+
+.recover-error {
+    background-color: rgba(255, 0, 0, 0.15);
+    border: 1px solid #ff4d4d;
+}
+
 /* Responsividade */
 @media (max-width: 480px) {
     .auth-container {

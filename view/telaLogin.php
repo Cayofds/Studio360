@@ -23,6 +23,10 @@
         <p class="auth-footer">
             Não tem uma conta? <a href="./telaCadastro.php">Cadastre-se</a>
         </p>
+
+        <p class="auth-footer">
+            Esqueceu a senha? <a href="./telaRecuperarSenha.php">Recuperar acesso</a>
+        </p>
     </div>
 </body>
 </html>
